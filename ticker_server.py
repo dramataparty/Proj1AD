@@ -1,21 +1,21 @@
 class resource:
-def __init__(self, resource_id):
-    pass # Remover esta linha e fazer implementação da função
+    def __init__(self, resource_id):
+        pass # Remover esta linha e fazer implementação da função
 
-    def subscribe(self, client_id, time_limit):
-    pass # Remover esta linha e fazer implementação da função
+        def subscribe(self, client_id, time_limit):
+        pass # Remover esta linha e fazer implementação da função
 
-    def unsubscribe (self, client_id):
-    pass # Remover esta linha e fazer implementação da função
+        def unsubscribe (self, client_id):
+        pass # Remover esta linha e fazer implementação da função
 
-    def status(self, client_id):
-    pass # Remover esta linha e fazer implementação da função
+        def status(self, client_id):
+        pass # Remover esta linha e fazer implementação da função
 
-    def __repr__(self):
-    output = ""
-    # R <resource_id> <list of subscribers>
+        def __repr__(self):
+        output = ""
+        # R <resource_id> <list of subscribers>
 
-    return output
+        return output
 
 
 
