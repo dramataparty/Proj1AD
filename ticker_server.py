@@ -1,8 +1,11 @@
 class resource:
     def __init__(self, resource_id):
+        self.resource_id=resource_id
         pass # Remover esta linha e fazer implementação da função
 
         def subscribe(self, client_id, time_limit):
+            self.client_id=client_id
+            
         pass # Remover esta linha e fazer implementação da função
 
         def unsubscribe (self, client_id):
@@ -18,9 +21,19 @@ class resource:
         return output
 
 
+        
 
 class resource_pool:
+    cmds = {'SUBSCR': subscribe,
+            'CANCEL':unsubscribe,
+            'STATUS':status ,
+            'INFOS': infos ,
+            'STATIS': statis }
+    
     def __init__(self, N, K, M):
+        self.N = N
+        self.K = K
+        self.M = M
     pass # Remover esta linha e fazer implementação da função
 
     def clear_expired_subs(self):
@@ -43,6 +56,14 @@ class resource_pool:
 
     def __repr__(self):
     output = ""
+    
+    
+    def process(line):
+        cmd, *args = line.split()
+    return cmds[cmd](*args)
+
+process(msg)
+
 
     # Acrescentar no output uma linha por cada recurso
     return output
