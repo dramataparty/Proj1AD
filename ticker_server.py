@@ -24,6 +24,7 @@ class resource:
         
 
 class resource_pool:
+    subs = {}
     cmds = {'SUBSCR': subscribe,
             'CANCEL':unsubscribe,
             'STATUS':status ,
@@ -37,12 +38,15 @@ class resource_pool:
     pass # Remover esta linha e fazer implementação da função
 
     def clear_expired_subs(self):
+        subs = {}
     pass # Remover esta linha e fazer implementação da função
 
     def subscribe(self, resource_id, client_id, time_limit):
+        subs.update({:})
     pass # Remover esta linha e fazer implementação da função
 
     def unsubscribe (self, resource_id, client_id):
+        subs.pop({:})
     pass # Remover esta linha e fazer implementação da função
 
     def status(self, resource_id, client_id):
