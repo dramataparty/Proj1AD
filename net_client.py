@@ -6,7 +6,7 @@ Números de aluno:
 
 # zona para fazer importação
 
-import sock_utils
+import sock_utils as su
 import sys, socket as s
 
 # definição da classe server_connection 
@@ -14,12 +14,12 @@ import sys, socket as s
 
 
 class server_connection:
-    conn_sock = s.socket(s.AF_INET, s.SOCK_STREAM)
     def __init__(self, address, port):
         
         if len(sys.argv) > 1:
             self.address = address
             self.port = port   
+            conn_sock = su.create_tcp_client_socket(address, port);
         else:
             self.address = '127.0.0.1'
             self.port = 9999

@@ -7,8 +7,8 @@ Números de aluno:
 """
 
 # Zona para fazer importação
-
-
+import sock_utils as su
+import sys, socket as s
 ###############################################################################
 
 class resource:
