@@ -1,4 +1,18 @@
+"""
+Aplicações Distribuídas - Projeto 1 - net_client.py
+Grupo:
+Números de aluno:
+"""
+
+# zona para fazer importação
+
+import sock_utils
 import sys, socket as s
+
+# definição da classe server_connection 
+
+
+
 class server_connection:
     conn_sock = s.socket(s.AF_INET, s.SOCK_STREAM)
     def __init__(self, address, port):

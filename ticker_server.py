@@ -1,3 +1,16 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+"""
+Aplicações Distribuídas - Projeto 1 - ticker_server.py
+Grupo:
+Números de aluno:
+"""
+
+# Zona para fazer importação
+
+
+###############################################################################
+
 class resource:
     def __init__(self, resource_id):
         self.resource_id=resource_id
@@ -21,7 +34,7 @@ class resource:
         return output
 
 
-        
+        ###############################################################################
 
 class resource_pool:
     subs = {}
@@ -71,3 +84,8 @@ process(msg)
 
     # Acrescentar no output uma linha por cada recurso
     return output
+
+
+###############################################################################
+
+# código do programa principal
