@@ -12,10 +12,6 @@ def create_tcp_client_socket(address, port):
     PORT = port
     sock_ligacao = s.socket(s.AF_INET, s.SOCK_STREAM)
     return sock_ligacao
-
-def receive_all(socket, length):
-    b = ""
-    return b
     
 #Esta função receberá exatamente lenght bytes através da socket. Devem considerar o caso de a
 #socket remota fechar a ligação antes de enviar o número esperado de bytes.
