@@ -13,6 +13,7 @@ import sys, socket as s
 
 class resource:
     def __init__(self, resource_id):
+        su.create_tcp_server_socket(self.address, self.port);
         self.resource_id=resource_id
         pass # Remover esta linha e fazer implementação da função
 
@@ -28,10 +29,10 @@ class resource:
         pass # Remover esta linha e fazer implementação da função
 
         def __repr__(self):
-        output = ""
-        # R <resource_id> <list of subscribers>
+            output = ""
+            # R <resource_id> <list of subscribers>
 
-        return output
+            return output
 
 
         ###############################################################################
