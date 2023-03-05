@@ -56,20 +56,50 @@ class resource_pool:
     pass # Remover esta linha e fazer implementação da função
 
     def subscribe(self, resource_id, client_id, time_limit):
-        subs.update({:})
+        if :
+             subs.update({resource_id:client_id})
+            return 'OK'
+        elif:
+            return 'NOK'
+        else:
+            return 'UNKNOWN RESOURCE'
+            
+       
     pass # Remover esta linha e fazer implementação da função
 
     def unsubscribe (self, resource_id, client_id):
-        subs.pop({:})
+       if :
+             subs.pop({resource_id:client_id})
+            return 'OK'
+        elif:
+            return 'NOK'
+        else:
+            return 'UNKNOWN RESOURCE'
     pass # Remover esta linha e fazer implementação da função
 
     def status(self, resource_id, client_id):
+         if :
+             subs.pop({resource_id:client_id})
+            return 'SUBSCRIBED'
+        elif:
+            return 'UNSUBSCRIBED'
+        else:
+            return 'UNKNOWN RESOURCE'
     pass # Remover esta linha e fazer implementação da função
 
     def infos(self, option, client_id):
+        if option=="M":
+            return #lista de elementos subscritos
+        elif option=="K":
+            return #<número de ações que cli-ente ainda pode subscre-ver>
     pass # Remover esta linha e fazer implementação da função
 
     def statis(self, option, resource_id):
+        if option=="L":
+            if :
+                return 'UNKNOWN RESOURCE'
+        elif option=="ALL":
+            return #numero coisas
     pass # Remover esta linha e fazer implementação da função
 
     def __repr__(self):

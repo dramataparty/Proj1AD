@@ -25,7 +25,7 @@ def send_receive(self, data):
         
         if msg in serv_commands:
             conn_sock = s.socket(s.AF_INET, s.SOCK_STREAM)
-            conn_sock.connect((HOST, PORT))
+            conn_sock.connect((self.address, self.port))
             
             conn_sock.sendall(msg.encode('utf-8'))
             resposta = conn_sock.recv(1024)
