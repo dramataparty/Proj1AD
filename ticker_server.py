@@ -96,7 +96,7 @@ class resource_pool:
 
     def statis(self, option, resource_id):
         if option=="L":
-            if :
+            if resource_id not in subs:
                 return 'UNKNOWN RESOURCE'
         elif option=="ALL":
             return #numero coisas
