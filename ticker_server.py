@@ -7,10 +7,16 @@ Números de aluno: 56931, 56922
 """
 
 # Zona para fazer importação
-import sock_utils as su
-import sys, socket as s
+
 ###############################################################################
 
+import sock_utils as su
+import sys, socket as s
+
+
+###############################################################################
+
+# código do programa principal
 class resource:
     def __init__(self, resource_id):
         su.create_tcp_server_socket(self.address, self.port);
@@ -35,7 +41,6 @@ class resource:
             return output
 
 
-        ###############################################################################
 
 class resource_pool:
     subs = {}
@@ -85,9 +90,14 @@ class resource_pool:
 
     def infos(self, option, client_id):
         if option=="M":
-            return #lista de elementos subscritos
+            subbed = []
+            for i in resource_pool.subs:
+                if client_id in i:
+                    subbed.append({i})
+                    
+            return subbed #lista de elementos subscritos
         elif option=="K":
-            return #<número de ações que cli-ente ainda pode subscre-ver>
+            return #<número de ações que cliente ainda pode subscre-ver>
     pass # Remover esta linha e fazer implementação da função
 
     def statis(self, option, resource_id):
@@ -95,16 +105,10 @@ class resource_pool:
             if resource_id not in resource_pool.subs:
                 return 'UNKNOWN RESOURCE'
         elif option=="ALL":
-            return #numero coisas
+            return len(resource_pool.subs)#numero coisas
     pass # Remover esta linha e fazer implementação da função
 
-    def __repr__(self):
-        output = ""
-        process(msg)
-
-
-        # Acrescentar no output uma linha por cada recurso
-        return output
+   
     
     cmds = {'SUBSCR': subscribe,
             'CANCEL':unsubscribe,
@@ -116,9 +120,11 @@ class resource_pool:
         cmd, *args = line.split()
         return cmds[cmd](*args)
     
+    def __repr__(self):
+        output = ""
+        output += process(msg) + '\n'
+        # Acrescentar no output uma linha por cada recurso
+        return output
 
 
 
-###############################################################################
-
-# código do programa principal
