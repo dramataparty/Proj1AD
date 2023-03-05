@@ -103,18 +103,18 @@ class resource_pool:
     pass # Remover esta linha e fazer implementação da função
 
     def __repr__(self):
-    output = ""
-    
+        output = ""
+        process(msg)
+
+
+        # Acrescentar no output uma linha por cada recurso
+        return output
     
     def process(line):
         cmd, *args = line.split()
-    return cmds[cmd](*args)
-
-process(msg)
+        return cmds[cmd](*args)
 
 
-    # Acrescentar no output uma linha por cada recurso
-    return output
 
 
 ###############################################################################
