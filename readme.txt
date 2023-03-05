@@ -2,8 +2,8 @@
 Diogo Forte nº 56931
 João Leal nº 56922
 
-Linhas de codigo correm sem problemas, connecao entre servidor e cliente parecem estar a funcionar corretamente
+Linhas de codigo correm sem problemas mas retornam vazio, connecao entre servidor e cliente funcionais
 Limites de tempo para as subscricoes, nao implementados
-Problemas em correr a linha de comando corretamente
+Linha de comando não recebe e devolve comandos corretamente (n/implementado)
 
-Secção e formatamento do output em desenvolvimento ainda
+
