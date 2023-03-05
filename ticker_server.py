@@ -44,75 +44,75 @@ class resource_pool:
             'STATUS':status ,
             'INFOS': infos ,
             'STATIS': statis }
-    
-    def __init__(self, N, K, M):
-        self.N = N
-        self.K = K
-        self.M = M
-    pass # Remover esta linha e fazer implementação da função
+        
+        def __init__(self, N, K, M):
+            self.N = N
+            self.K = K
+            self.M = M
+        pass # Remover esta linha e fazer implementação da função
 
-    def clear_expired_subs(self):
-        subs = {}
-    pass # Remover esta linha e fazer implementação da função
+        def clear_expired_subs(self):
+            subs = {}
+        pass # Remover esta linha e fazer implementação da função
 
-    def subscribe(self, resource_id, client_id, time_limit):
-        if(client_id not in subs):
-            subs.update({resource_id:client_id})
-            return 'OK'
-        elif(client_id in subs):
-            return 'NOK'
-        else:
-            return 'UNKNOWN RESOURCE'
-            
-       
-    pass # Remover esta linha e fazer implementação da função
-
-    def unsubscribe (self, resource_id, client_id):
-        if(client_id in subs):
-            subs.pop({resource_id:client_id})
-            return 'OK'
-        elif(client_id not in subs):
-            return 'NOK'
-        else:
-            return 'UNKNOWN RESOURCE'
-    pass # Remover esta linha e fazer implementação da função
-
-    def status(self, resource_id, client_id):
-        if({resource_id:client_id} in subs):
-            
-            return 'SUBSCRIBED'
-        if ({resource_id:client_id} not in subs):
-            return 'UNSUBSCRIBED'
-        else:
-            return 'UNKNOWN RESOURCE'
-    pass # Remover esta linha e fazer implementação da função
-
-    def infos(self, option, client_id):
-        if option=="M":
-            return #lista de elementos subscritos
-        elif option=="K":
-            return #<número de ações que cli-ente ainda pode subscre-ver>
-    pass # Remover esta linha e fazer implementação da função
-
-    def statis(self, option, resource_id):
-        if option=="L":
-            if resource_id not in subs:
+        def subscribe(self, resource_id, client_id, time_limit):
+            if(client_id not in resource_pool.subs):
+                subs.update({resource_id:client_id})
+                return 'OK'
+            elif(client_id in resource_pool.subs):
+                return 'NOK'
+            else:
                 return 'UNKNOWN RESOURCE'
-        elif option=="ALL":
-            return #numero coisas
-    pass # Remover esta linha e fazer implementação da função
+                
+        
+        pass # Remover esta linha e fazer implementação da função
 
-    def __repr__(self):
-        output = ""
-        process(msg)
+        def unsubscribe (self, resource_id, client_id):
+            if(client_id in resource_pool.subs):
+                resource_pool.subs.pop({resource_id:client_id})
+                return 'OK'
+            elif(client_id not in resource_pool.subs):
+                return 'NOK'
+            else:
+                return 'UNKNOWN RESOURCE'
+        pass # Remover esta linha e fazer implementação da função
+
+        def status(self, resource_id, client_id):
+            if({resource_id:client_id} in resource_pool.subs):
+                
+                return 'SUBSCRIBED'
+            if ({resource_id:client_id} not in subs):
+                return 'UNSUBSCRIBED'
+            else:
+                return 'UNKNOWN RESOURCE'
+        pass # Remover esta linha e fazer implementação da função
+
+        def infos(self, option, client_id):
+            if option=="M":
+                return #lista de elementos subscritos
+            elif option=="K":
+                return #<número de ações que cli-ente ainda pode subscre-ver>
+        pass # Remover esta linha e fazer implementação da função
+
+        def statis(self, option, resource_id):
+            if option=="L":
+                if resource_id not in subs:
+                    return 'UNKNOWN RESOURCE'
+            elif option=="ALL":
+                return #numero coisas
+        pass # Remover esta linha e fazer implementação da função
+
+        def __repr__(self):
+            output = ""
+            process(msg)
 
 
-        # Acrescentar no output uma linha por cada recurso
-        return output
-    
-    def process(line):
-        cmd, *args = line.split()
-        return cmds[cmd](*args)
+            # Acrescentar no output uma linha por cada recurso
+            return output
+        
+        def process(line):
+            cmd, *args = line.split()
+            return cmds[cmd](*args)
     
 
 
