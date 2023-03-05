@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 Aplicações Distribuídas - Projeto 1 - ticker_server.py
-Grupo:
-Números de aluno:
+Grupo: 52
+Números de aluno: 56931, 56922
 """
 
 # Zona para fazer importação

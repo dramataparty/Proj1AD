@@ -1,7 +1,7 @@
 """
 Aplicações Distribuídas - Projeto 1 - net_client.py
-Grupo:
-Números de aluno:
+Grupo: 52
+Números de aluno: 56931,56922
 """
 
 # zona para fazer importação
