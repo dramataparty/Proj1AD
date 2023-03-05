@@ -20,13 +20,13 @@ class resource:
         def subscribe(self, client_id, time_limit):
             self.client_id=client_id
             
-        pass # Remover esta linha e fazer implementação da função
+            pass # Remover esta linha e fazer implementação da função
 
         def unsubscribe (self, client_id):
-        pass # Remover esta linha e fazer implementação da função
+            pass # Remover esta linha e fazer implementação da função
 
         def status(self, client_id):
-        pass # Remover esta linha e fazer implementação da função
+            pass # Remover esta linha e fazer implementação da função
 
         def __repr__(self):
             output = ""
@@ -56,10 +56,10 @@ class resource_pool:
     pass # Remover esta linha e fazer implementação da função
 
     def subscribe(self, resource_id, client_id, time_limit):
-        if :
-             subs.update({resource_id:client_id})
+        if(client_id not in subs):
+            subs.update({resource_id:client_id})
             return 'OK'
-        elif:
+        elif(client_id in subs):
             return 'NOK'
         else:
             return 'UNKNOWN RESOURCE'
@@ -68,18 +68,18 @@ class resource_pool:
     pass # Remover esta linha e fazer implementação da função
 
     def unsubscribe (self, resource_id, client_id):
-       if :
-             subs.pop({resource_id:client_id})
+        if(client_id in subs):
+            subs.pop({resource_id:client_id})
             return 'OK'
-        elif:
+        elif(client_id not in subs):
             return 'NOK'
         else:
             return 'UNKNOWN RESOURCE'
     pass # Remover esta linha e fazer implementação da função
 
     def status(self, resource_id, client_id):
-         if :
-             subs.pop({resource_id:client_id})
+         if():
+            subs.pop({resource_id:client_id})
             return 'SUBSCRIBED'
         elif:
             return 'UNSUBSCRIBED'
