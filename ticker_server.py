@@ -78,10 +78,10 @@ class resource_pool:
     pass # Remover esta linha e fazer implementação da função
 
     def status(self, resource_id, client_id):
-         if():
-            subs.pop({resource_id:client_id})
+        if({resource_id:client_id} in subs):
+            
             return 'SUBSCRIBED'
-        elif:
+        if ({resource_id:client_id} not in subs):
             return 'UNSUBSCRIBED'
         else:
             return 'UNKNOWN RESOURCE'
@@ -113,7 +113,7 @@ class resource_pool:
     def process(line):
         cmd, *args = line.split()
         return cmds[cmd](*args)
-
+    
 
 
 
