@@ -6,3 +6,4 @@ Linhas de codigo correm sem problemas, connecao entre servidor e cliente parecem
 Limites de tempo para as subscricoes, nao implementados
 Problemas em correr a linha de comando corretamente
 
+Secção e formatamento do output em desenvolvimento ainda

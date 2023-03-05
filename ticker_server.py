@@ -24,14 +24,15 @@ class resource:
         pass # Remover esta linha e fazer implementação da função
 
         def subscribe(self, client_id, time_limit):
-            self.client_id=client_id
-            
+            return resource_pool.subscribe(self, client_id, time_limit)
             pass # Remover esta linha e fazer implementação da função
 
         def unsubscribe (self, client_id):
+            return resource_pool.unsubscribe(self, client_id)
             pass # Remover esta linha e fazer implementação da função
 
         def status(self, client_id):
+            return resource_pool.status(self, client_id)
             pass # Remover esta linha e fazer implementação da função
 
         def __repr__(self):
