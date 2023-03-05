@@ -39,11 +39,7 @@ class resource:
 
 class resource_pool:
     subs = {}
-    cmds = {'SUBSCR': subscribe,
-            'CANCEL':unsubscribe,
-            'STATUS':status ,
-            'INFOS': infos ,
-            'STATIS': statis }
+    
         
     def __init__(self, N, K, M):
         self.N = N
@@ -109,6 +105,12 @@ class resource_pool:
 
         # Acrescentar no output uma linha por cada recurso
         return output
+    
+    cmds = {'SUBSCR': subscribe,
+            'CANCEL':unsubscribe,
+            'STATUS':status ,
+            'INFOS': infos ,
+            'STATIS': statis }
     
     def process(line):
         cmd, *args = line.split()
