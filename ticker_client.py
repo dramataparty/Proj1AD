@@ -19,14 +19,11 @@ def send_receive(self, data):
         
         local_commands = []
         serv_commands = []
-
-        if msg == 'EXIT':
-            break
-
-        elif msg in local_commands:
+        if msg in local_commands:
+            a = "process"
             #processar
         
-        elif msg in serv_commands:
+        if msg in serv_commands:
             conn_sock = s.socket(s.AF_INET, s.SOCK_STREAM)
             conn_sock.connect((HOST, PORT))
             
@@ -34,8 +31,11 @@ def send_receive(self, data):
             resposta = conn_sock.recv(1024)
             print("resposta: " + resposta.decode())
             conn_sock.close()
+        
+        if msg == 'EXIT':
+            break
 
-        #caso faltem argumentos
+        if '' in sys.argv:#caso faltem argumentos
             print("MISSING-ARGUMENTS")
 
         else:
